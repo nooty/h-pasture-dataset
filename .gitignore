@@ -1,0 +1,11 @@
+# Ignore the client_secrets.json file
+client_secrets.json
+
+# Ignore all contents inside the dataset and data folders under scripts
+scripts/dataset/
+scripts/data/
+scripts/output/
+
+# If you want to ignore only specific types of files within these folders, add:
+# scripts/dataset/*
+# scripts/data/*
