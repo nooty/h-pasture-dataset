@@ -3,6 +3,8 @@ The H-Pasture Dataset is a repository of pasture images used to train and valida
 
 This [dataset](https://drive.google.com/drive/folders/1vRrVYCH6wE5pwK7oNJGpyfpCUxFNgKYS?usp=sharing) was developed as part of the master's thesis "Application of Convolutional Neural Networks in Estimating the Height of Native and Cultivated Pastures". The research introduced an approach that applies computer vision techniques to estimate the average height of three types of pastures: native vegetation from southern Brazilian fields, ryegrass (*Lolium multiflorum L.*), and sudangrass (*Sorghum sudanense L.*).
 
+This work was conducted within the **Postgraduate Program in Applied Computing (PPGCAP)** at **Federal University of Pampa (UNIPAMPA)**, in collaboration with **EMBRAPA Pecuária Sul**. For more details about the program, visit the [PPGCAP website](https://cursos.unipampa.edu.br/cursos/ppgcap/).
+
 ---
 
 ## Repository Purpose
@@ -28,7 +30,7 @@ The dataset for this project, due to its size, is stored on **Google Drive** and
 
 The dataset is organized as follows:
 
-- **Images**: Photographs are organized by vegetation type (`native`, `ryegrass`, `sudangrass`) in separate folders. Each folder contains images and a `mapping.json` file that maps each photo to its corresponding average vegetation height.
+- **Images**: The dataset consists of photographs in **JPG format** with a resolution of **1280x720 pixels**, organized by vegetation type (`native`, `ryegrass`, `sudangrass`) in separate folders. Each folder contains images and a `mapping.json` file that maps each photo to its corresponding average vegetation height.
 
 - **File Naming Convention**:  
   Each collection can contain up to 16 photos, stored in files named using the format `COLLECTIONID_SEQUENTIALNUMBER`. In this naming convention:
@@ -50,7 +52,7 @@ The repository includes the following scripts:
 
 - **`download.py`**: Downloads the dataset directly from Google Drive and organizes it in the `dataset/` folder. This script automates the download process for easier access to the data.
 
-- **`preprocessing.py`**: Reads the `dataset/` folder based on the selected vegetation type and generates a set of images for training and validating convolutional neural networks. This script supports data augmentation and organizes the output into `training` and `test` folders.
+- **`data-preprocessing.py`**: Reads the `dataset/` folder based on the selected vegetation type and generates a set of images for training and validating convolutional neural networks. This script supports data augmentation and organizes the output into `training` and `test` folders.
 
 Both scripts are located in the `scripts/` folder and include logging to track their progress. Be sure to check the usage instructions in the comments within each script.
 
